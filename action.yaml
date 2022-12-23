@@ -5,6 +5,9 @@ inputs:
     description: 'Name of'
     required: true
     default: 'World'
+  singer:
+    required: true
+    default: "Bob Marley"
 outputs:
   random-number:
     description: "Random number"
@@ -20,6 +23,8 @@ runs:
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
+    - id: name-of-singer
+      run: echo "The name of singer is" ${{ inputs.singer }}
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
     - run: goodbye.sh
