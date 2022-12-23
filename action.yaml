@@ -24,6 +24,6 @@ runs:
       shell: bash
     - run: goodbye.sh
       shell: bash
-    - id: my-name-generator
-      run: echo "My name is Trinta"
+    - id: my-name-generator 
+      run: echo "My name is Trinta"  >> $GITHUB_OUTPUT
       shell: bash
