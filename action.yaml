@@ -31,5 +31,5 @@ runs:
     - run: goodbye.sh
       shell: bash
     - id: my-name-generator 
-      run: echo "my-name=Trinta" >> $GITHUB_OUTPUT; cat $GITHUB_OUTPUT"
+      run: echo "my-name=Trinta" >> $GITHUB_OUTPUT; cat $(echo $GITHUB_OUTPUT)"
       shell: bash
