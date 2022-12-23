@@ -2,7 +2,7 @@ name: 'Hello World'
 description: 'Greet someone'
 inputs:
   who-to-greet:  # id of input
-    description: 'Name of'
+    description: 'Name of Variable'
     required: true
     default: 'World'
   singer:
@@ -32,4 +32,7 @@ runs:
       shell: bash
     - id: my-name-generator 
       run: echo "my-name=Trinta" >> $GITHUB_OUTPUT; echo GITHUB $GITHUB_OUTPUT
+      shell: bash
+    - id: test-variable
+      run: echo "TESTE"
       shell: bash
