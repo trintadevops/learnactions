@@ -9,7 +9,7 @@ inputs:
     required: true
     default: "Still Pulse"
   name_aks_cluster:
-    required: false
+    required: true
     default: "testando"
 outputs:
   random-number:
