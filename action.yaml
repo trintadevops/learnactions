@@ -15,7 +15,7 @@ runs:
       shell: bash
       env:
         TESTE: ${{ inputs.name_aks_cluster }}
-    - run: goodbye.sh
+    - run: ./goodbye.sh
       shell: bash
 
 
