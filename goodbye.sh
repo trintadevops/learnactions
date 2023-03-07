@@ -1,6 +1,6 @@
 echo "Goodbye Bitch"
 
-if [ -z $TESTE ];then
+if [ ! -z $TESTE ];then
     echo "TESTE AKS SANDBOX DEPLOY - export"
     echo "Testando a variavel $TESTE"
 else
