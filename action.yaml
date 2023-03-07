@@ -9,7 +9,7 @@ inputs:
     required: true
     default: "Still Pulse"
   name_aks_cluster:
-    required: true
+    required: false
     default: "testando"
 outputs:
   random-number:
@@ -24,6 +24,8 @@ runs:
     - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
     - id: test
+      run: echo "TESTANDO EXPORT DE VARIAVEL"
+      shell: bash
       env:
         TESTE: ${{ inputs.name_aks_cluster }}
     - id: random-number-generator
