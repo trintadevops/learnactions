@@ -1,9 +1,9 @@
 echo "Goodbye Bitch"
 
-if [ -z "$TESTE" ];then
+if [ ! -z "$TESTE" ];then
     touch /tmp/teste_aks
     echo "TESTE AKS SANDBOX DEPLOY"
-    echo $$NAME_AKS_CLUSTER
+    echo $TESTE
 else
     AKS_SETTINGS_FILE=""
     if [[ -f "aks.settings.yml" ]]; then
