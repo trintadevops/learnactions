@@ -1,13 +1,14 @@
 name: 'Hello World'
 description: 'Greet someone'
 inputs:
+
   name_aks_cluster:
     required: true
     default: "testando"
 runs:
   using: "composite"
   steps:
-    - run: echo Hello
+    - run: goodbye.sh
       shell: bash
       env:
         TESTE: ${{ inputs.name_aks_cluster }}
