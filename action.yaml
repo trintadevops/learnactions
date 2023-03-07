@@ -21,9 +21,10 @@ runs:
     - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
     - id: test
+      run: TESTE=${{ inputs.name_aks_cluster }}; echo $TESTE
       shell: bash
       env:
-        TESTE: ${{ inputs.name_aks_cluster }}
+        TESTE:  ${{ inputs.name_aks_cluster }}
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)"  >> $GITHUB_OUTPUT
       shell: bash
