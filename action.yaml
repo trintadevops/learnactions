@@ -1,13 +1,21 @@
 name: 'Hello World'
 description: 'Greet someone'
 inputs:
+  who-to-greet:  # id of input
+    description: 'Name of Variable'
+    required: true
+    default: 'World'
   name_aks_cluster:
     required: true
     default: "testando"
 runs:
   using: "composite"
   steps:
-    - run: goodbye.sh
+    - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
       env:
         TESTE: ${{ inputs.name_aks_cluster }}
+    - run: goodbye.sh
+      shell: bash
+
+

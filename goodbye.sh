@@ -1,7 +1,6 @@
 echo "Goodbye Bitch"
 
 if [ -z $TESTE ];then
-    touch /tmp/teste_aks
     echo "TESTE AKS SANDBOX DEPLOY - export"
     echo "Testando a variavel $TESTE"
 else
