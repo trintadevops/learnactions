@@ -21,7 +21,7 @@ runs:
     - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
     - id: test
-      run: TESTE=${{ inputs.name_aks_cluster }}; echo $TESTE
+      run: echo "TESTANDO EXPORT DE VARIAVEL"
       shell: bash
       env:
         TESTE:  ${{ inputs.name_aks_cluster }}
