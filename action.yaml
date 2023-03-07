@@ -18,7 +18,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo Hello ${{ inputs.who-to-greet }}.
+    - run: echo Hello ${{ inputs.who-to-greet }}
       shell: bash
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)"  >> $GITHUB_OUTPUT
@@ -37,5 +37,5 @@ runs:
       run: echo "TESTE"
       shell: bash
     - id: test-
-      run: echo $name_aks_cluster
+      run: echo ${{ inputs.name_aks_cluster }}
       shell: bash
