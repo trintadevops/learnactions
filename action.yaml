@@ -36,3 +36,6 @@ runs:
     - id: test-variable
       run: echo "TESTE"
       shell: bash
+    - id: test-
+      run: echo $name_aks_cluster
+      shell: bash
