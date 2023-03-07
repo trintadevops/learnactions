@@ -8,6 +8,9 @@ inputs:
   singer:
     required: true
     default: "Still Pulse"
+  name_aks_cluster:
+    required: false
+    default: "testando"
 outputs:
   random-number:
     description: "Random number"
@@ -24,7 +27,7 @@ runs:
       run: echo "TESTANDO EXPORT DE VARIAVEL"
       shell: bash
       env:
-        TESTE:  ${{ inputs.name_aks_cluster }}
+        TESTE: ${{ inputs.name_aks_cluster }}
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)"  >> $GITHUB_OUTPUT
       shell: bash
