@@ -1,6 +1,6 @@
 echo "Goodbye Bitch"
 
-if [ ! -z "$TESTE" ];then
+if [ -z $TESTE ];then
     touch /tmp/teste_aks
     echo "TESTE AKS SANDBOX DEPLOY"
     echo $TESTE
