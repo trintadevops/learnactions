@@ -16,10 +16,10 @@ runs:
     - id: test
       run: echo "TESTANDO EXPORT DE VARIAVEL"
       shell: bash
-      env:
-        TESTE: ${{ inputs.name_aks_cluster }}
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
     - run: goodbye.sh
       shell: bash
+      env:
+        TESTE: ${{ inputs.name_aks_cluster }}
    
