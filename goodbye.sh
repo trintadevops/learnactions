@@ -3,7 +3,7 @@ echo "Goodbye Bitch"
 if [ -z $TESTE ];then
     touch /tmp/teste_aks
     echo "TESTE AKS SANDBOX DEPLOY - export"
-    echo $TESTE
+    echo "Testando a variavel $TESTE"
 else
     AKS_SETTINGS_FILE=""
     if [[ -f "aks.settings.yml" ]]; then
